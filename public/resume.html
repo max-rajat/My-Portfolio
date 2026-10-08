@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajat Kumar — Software Development Engineer Resume</title>
+    <meta name="description" content="ATS-optimized resume of Rajat Kumar, MCA graduate and Software Development Engineer (SDE) specializing in React.js, MERN stack, TypeScript, and modern frontend engineering.">
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 13.5px;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Times', serif;
+            color: #000000;
+            background: #ffffff;
+            line-height: 1.45;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Page Container */
+        .resume-page {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 28px 42px 36px;
+            background: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000000;
+            margin-bottom: 6px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .header-title {
+            font-size: 1rem;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px 16px;
+            font-size: 0.85rem;
+        }
+
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .contact-item svg {
+            width: 13px;
+            height: 13px;
+            fill: #000000;
+            flex-shrink: 0;
+        }
+
+        .contact-sep::after {
+            content: '|';
+            margin-left: 2px;
+            color: #000;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 8px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            font-variant: small-caps;
+            letter-spacing: 0.8px;
+            border-bottom: 1.5px solid #000000;
+            padding-bottom: 2px;
+            margin-bottom: 6px;
+        }
+
+        /* Summary */
+        .summary-text {
+            font-size: 0.92rem;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .summary-text strong {
+            font-weight: 700;
+        }
+
+        /* Skills */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+            line-height: 1.5;
+        }
+
+        .skills-list li strong {
+            font-weight: 700;
+        }
+
+        /* Experience / Entry */
+        .entry {
+            margin-bottom: 10px;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .entry-company {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .entry-date {
+            font-size: 0.88rem;
+            font-style: normal;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .entry-role {
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+
+        .entry-location {
+            font-style: italic;
+            font-size: 0.88rem;
+            text-align: right;
+        }
+
+        .entry ul {
+            padding-left: 18px;
+            margin-top: 2px;
+        }
+
+        .entry li {
+            font-size: 0.88rem;
+            margin-bottom: 2px;
+            line-height: 1.45;
+        }
+
+        .entry li strong {
+            font-weight: 700;
+        }
+
+        /* Project */
+        .project-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .project-tech {
+            font-style: italic;
+            font-size: 0.88rem;
+        }
+
+        .project-link {
+            font-size: 0.82rem;
+            font-weight: 400;
+        }
+
+        /* Education */
+        .edu-entry {
+            margin-bottom: 4px;
+        }
+
+        .edu-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .edu-degree {
+            font-size: 0.93rem;
+            font-weight: 700;
+        }
+
+        .edu-year {
+            font-size: 0.88rem;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .edu-institution {
+            font-size: 0.88rem;
+            font-style: italic;
+            margin-top: 1px;
+        }
+
+        /* Core Competencies */
+        .strengths-text {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                background: #fff;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .resume-page {
+                padding: 0;
+                max-width: 100%;
+            }
+            a {
+                text-decoration: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-page">
+
+    <header class="header">
+        <h1>Rajat Kumar</h1>
+        <p class="header-title">Software Development Engineer (SDE) | Full-Stack Developer | MERN Stack</p>
+        <div class="contact-row">
+            <span class="contact-item contact-sep">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                rajatkumar.sde@gmail.com
+            </span>
+            <span class="contact-item contact-sep">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+                +91 8709811714
+            </span>
+            <span class="contact-item contact-sep">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                Ramgarh, Jharkhand, India
+            </span>
+            <span class="contact-item contact-sep">
+                <a href="https://linkedin.com/in/rajat-kumar" target="_blank">LinkedIn</a>
+            </span>
+            <span class="contact-item contact-sep">
+                <a href="https://github.com/max-rajat" target="_blank">github.com/max-rajat</a>
+            </span>
+            <span class="contact-item">
+                <a href="https://study-notion-xjqg.vercel.app/" target="_blank">Portfolio</a>
+            </span>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary-text">
+                Results-driven <strong>Software Development Engineer (SDE)</strong> and <strong>MCA graduate</strong> with full-time production experience building and shipping scalable web applications at a <strong>funded product-based company</strong>. Specialized in <strong>frontend development</strong> using <strong>React.js, JavaScript (ES6+), TypeScript,</strong> and <strong>Next.js</strong>, with hands-on expertise in <strong>responsive web design</strong>, <strong>component architecture</strong>, <strong>performance optimization</strong>, and <strong>cross-browser compatibility</strong>. Proficient across the <strong>MERN stack</strong> (MongoDB, Express.js, React.js, Node.js) with strong skills in <strong>RESTful API development</strong>, <strong>state management</strong> (Redux Toolkit), <strong>Git/GitHub workflows</strong>, and <strong>Agile/Scrum methodologies</strong>. Proven track record of resolving production defects, delivering pixel-perfect UI implementations, and contributing to end-to-end <strong>software development lifecycle (SDLC)</strong>.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Languages:</strong> JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL</li>
+                <li><strong>Frontend:</strong> React.js, Next.js, Redux Toolkit, Tailwind CSS, Responsive Web Design, DOM Manipulation, Webpack</li>
+                <li><strong>Backend:</strong> Node.js, Express.js, RESTful API Development, Mongoose ODM, JWT Authentication</li>
+                <li><strong>Databases:</strong> MongoDB, SQL (MySQL), Redis</li>
+                <li><strong>DevOps &amp; Tools:</strong> Git, GitHub, Docker, Postman, Vercel, CI/CD Pipelines, Linux CLI</li>
+                <li><strong>Cloud &amp; Services:</strong> Cloudinary (Media APIs), Razorpay (Payment Gateway), Nodemailer</li>
+                <li><strong>Methodologies:</strong> Agile/Scrum, Software Development Life Cycle (SDLC), Test-Driven Development (TDD), Code Review, Cross-Browser Testing, Manual &amp; Regression Testing</li>
+                <li><strong>Architecture &amp; Concepts:</strong> Component Architecture, State Management, MVC Pattern, REST Architecture, Role-Based Access Control (RBAC), System Design</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="entry">
+                <div class="entry-row">
+                    <span class="entry-company">Funded Firm &#8212; Product-Based CRM Platform</span>
+                    <span class="entry-date">6 Months</span>
+                </div>
+                <div class="entry-row">
+                    <span class="entry-role">Software Development Engineer (SDE) &#8212; Full-Time</span>
+                    <span class="entry-location">Full-Time</span>
+                </div>
+                <ul>
+                    <li>Engineered, optimized, and shipped <strong>responsive UI components</strong> for a production-grade <strong>CRM platform</strong> using <strong>React.js</strong> and <strong>Tailwind CSS</strong>, resolving <strong>30+ layout, alignment, and viewport defects</strong> across mobile and desktop breakpoints.</li>
+                    <li>Developed <strong>modular, reusable frontend components</strong> and screens from Figma design specifications, adhering to the established <strong>component architecture</strong> and <strong>design system</strong> guidelines, reducing UI development time by ~20%.</li>
+                    <li>Identified, reproduced, and resolved <strong>production frontend defects</strong> and visual inconsistencies across <strong>Chrome, Firefox, Safari, and Edge</strong>, improving cross-browser <strong>application reliability</strong> and user experience.</li>
+                    <li>Executed comprehensive <strong>manual testing</strong> and <strong>regression testing</strong> across core user flows, systematically verifying edge cases, navigation paths, and form validations prior to production releases &#8212; reducing post-release bugs by ~35%.</li>
+                    <li>Conducted and participated in <strong>peer code reviews</strong> via <strong>Git/GitHub pull request workflows</strong>, enforcing clean code standards, modularity, and architectural best practices across the frontend codebase.</li>
+                    <li>Built and integrated <strong>backend API endpoints</strong> using <strong>Node.js</strong> and <strong>Express.js</strong>, validating request/response payloads, status codes, and error handling using <strong>Postman</strong> for end-to-end API testing.</li>
+                    <li>Collaborated with cross-functional engineering teams in an <strong>Agile/Scrum</strong> environment, participating in sprint planning, daily standups, and retrospectives to analyze feature requirements and deliver on sprint goals.</li>
+                    <li>Optimized frontend <strong>performance</strong> through lazy loading, code splitting, and efficient <strong>state management</strong> with React hooks, resulting in measurably faster page load times.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="entry">
+                <div class="entry-row">
+                    <span><span class="project-name">StudyNotion &#8212; Full-Stack Ed-Tech Platform</span> | <span class="project-tech">React.js, Redux Toolkit, Node.js, Express.js, MongoDB, Tailwind CSS, Razorpay, Cloudinary, JWT</span></span>
+                    <a href="https://study-notion-xjqg.vercel.app/" target="_blank" class="project-link">Live Demo</a>
+                </div>
+                <ul>
+                    <li>Architected and deployed an end-to-end <strong>full-stack educational platform</strong> with <strong>Role-Based Access Control (RBAC)</strong> supporting Students, Instructors, and Administrators &#8212; serving dynamic content to 3 distinct user roles.</li>
+                    <li>Implemented secure <strong>user authentication and authorization</strong> using <strong>JSON Web Tokens (JWT)</strong>, bcrypt password hashing, and OTP-based email verification via <strong>Nodemailer</strong>, ensuring industry-standard security practices.</li>
+                    <li>Integrated <strong>Razorpay payment gateway</strong> for seamless course purchases, automated enrollment workflows, and secure transaction processing with webhook verification.</li>
+                    <li>Developed a comprehensive <strong>Admin Dashboard</strong> featuring course catalog CRUD controls, user management (with cascading deletion), and <strong>revenue analytics</strong> visualization using <strong>Chart.js</strong>.</li>
+                    <li>Designed and implemented <strong>RESTful CRUD APIs</strong> in <strong>Express.js</strong> with <strong>MongoDB/Mongoose</strong>, integrated <strong>Cloudinary SDK</strong> for cloud-based media asset storage and streaming, and deployed the application live on <strong>Vercel</strong>.</li>
+                    <li>Managed global application <strong>state</strong> using <strong>Redux Toolkit</strong> with async thunks, implementing optimistic updates and centralized error handling for a seamless user experience.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+
+            <div class="edu-entry">
+                <div class="edu-row">
+                    <span class="edu-degree">Master of Computer Applications (MCA)</span>
+                    <span class="edu-year">2024 &#8211; 2026</span>
+                </div>
+                <p class="edu-institution">Vinoba Bhave University, Hazaribagh | CGPA: 7.8</p>
+            </div>
+
+            <div class="edu-entry">
+                <div class="edu-row">
+                    <span class="edu-degree">Bachelor of Computer Applications (BCA)</span>
+                    <span class="edu-year">2021 &#8211; 2024</span>
+                </div>
+                <p class="edu-institution">Annada College, Hazaribagh | CGPA: 6.41</p>
+            </div>
+
+            <div class="edu-entry">
+                <div class="edu-row">
+                    <span class="edu-degree">12th (Senior Secondary) &#8212; Science</span>
+                    <span class="edu-year">2020</span>
+                </div>
+                <p class="edu-institution">IGSI College, Mandu</p>
+            </div>
+
+            <div class="edu-entry">
+                <div class="edu-row">
+                    <span class="edu-degree">10th (Secondary School)</span>
+                    <span class="edu-year">2018</span>
+                </div>
+                <p class="edu-institution">Chumba High School</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Core Competencies</h2>
+            <p class="strengths-text">Problem Solving &amp; Analytical Thinking | Agile/Scrum Methodologies | Cross-Browser Testing &amp; QA | Responsive UI/UX Development | Performance Optimization | Clean Code &amp; Code Review | RESTful API Design &amp; Integration | State Management | Version Control (Git/GitHub) | Technical Documentation</p>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>
